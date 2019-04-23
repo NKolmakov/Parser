@@ -145,6 +145,7 @@ public class Parser {
             char ch = jsonString.charAt(position);
             if (ch != '"') {
                 stringBuffer.append(ch);
+                position++;
             } else break;
         }
 
@@ -177,14 +178,20 @@ public class Parser {
         return element;
     }
 
-    private String parseStringValue(int position) {
+    private JsonElement parseStringValue(int position) {
         StringValue stringValue = new StringValue();
         StringBuffer stringBuffer = new StringBuffer();
-        char ch = jsonString.charAt(position);
 
         for (int i = position; i < jsonString.length(); i++) {
-            if()
+            char ch = jsonString.charAt(i);
+            if(ch !=',' || ch!=']' || ch !='}'){
+                stringBuffer.append(ch);
+                position++;
+            }else break;
         }
+
+        stringValue.setValue(stringBuffer.toString());
+        return stringValue;
     }
 }
 
