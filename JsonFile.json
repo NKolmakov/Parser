@@ -1,0 +1,17 @@
+{
+  "menu": "file",
+  "commands": [
+    {
+      "title": "new",
+      "action": "CreateDoc"
+    },
+    {
+      "title": "open",
+      "action": "OpenDoc"
+    },
+    {
+      "title": "close",
+      "action": "CloseDoc"
+    }
+  ]
+}

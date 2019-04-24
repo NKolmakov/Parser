@@ -1,11 +1,19 @@
 package by.grodno.jsonElements;
 
 public class JsonValue implements JsonElement{
-    public void add(JsonElement element) {
+    JsonElement element;
 
+    public void add(JsonElement element) {
+        this.element = element;
     }
 
-    public void convert2Xml() {
+    public String convert2Xml() {
+        return "<value>"+element.convert2Xml()+"</value>";
+    }
 
+    public void print() {
+        System.out.println("<value>");
+        element.print();
+        System.out.println("</value>");
     }
 }

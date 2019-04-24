@@ -2,5 +2,6 @@ package by.grodno.jsonElements;
 
 public interface JsonElement {
     void add(JsonElement element);
-    void convert2Xml();
+    String convert2Xml();
+    void print();
 }
