@@ -6,8 +6,12 @@ public class StringValue implements JsonElement{
 
     }
 
-    public void convert2Xml() {
+    public String convert2Xml() {
+        return "<value>"+value+"</value>";
+    }
 
+    public void print() {
+        System.out.println("<value>"+value+"</value>");
     }
 
     public void setValue(String value){
